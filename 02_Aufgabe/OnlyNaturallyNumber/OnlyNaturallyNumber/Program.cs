@@ -10,7 +10,6 @@ class Program {
             string input = Console.ReadLine();
             if(int.TryParse(input, out number) && number > 0) {
                 Console.WriteLine("Sie haben die Zahl {0} eingegeben.", number);
-                break;
             }
             else {
                 Console.WriteLine("Das war keine natürliche Zahl!");
