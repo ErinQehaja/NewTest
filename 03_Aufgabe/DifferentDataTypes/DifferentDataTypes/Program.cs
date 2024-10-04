@@ -1,40 +1,58 @@
 ﻿using System;
+using System.Globalization;
 
 class Program
 {
     static void Main(string[] args)
     {
-        int number;
-        bool result;
-        double kommaZahl;
-        DateTime datum = new DateTime(2024, 9, 27);
-
         string input = "";
-
-        while (true)
+        bool hasPreviousOutput = false;
+        while (input != "Beenden")
         {
+            if (hasPreviousOutput)
+            {
+                Console.WriteLine();
+            }
+            else
+            {
+                hasPreviousOutput = true;
+            }
             Console.WriteLine("Mögliche akzeptierte Werte zum Eingeben:");
             Console.WriteLine("- Eine natürliche Zahl");
-            Console.WriteLine("- 'Wahr' ");
-            Console.WriteLine("- 'Falsch' ");
+            Console.WriteLine("- 'True' ");
+            Console.WriteLine("- 'False' ");
             Console.WriteLine("- Kommazahl");
-            Console.WriteLine("- Ein Datum");
-
+            Console.WriteLine("- Ein Datum [Tag, Monat, Jahr]");
+            Console.WriteLine();
             input = Console.ReadLine();
 
-            if (int.TryParse(input, out number) && number > 0)
+            bool boolValue;
+            if (bool.TryParse(input, out boolValue))
             {
-                Console.WriteLine("Sie haben die Zahl {0} eingeben.", number);
+                Console.WriteLine("Der Datentyp ist: Bool");
+                Console.WriteLine($"Erkannte Variable: {boolValue}");
             }
-            if (input.Equals("Wahr", StringComparison.OrdinalIgnoreCase))
+            else if (int.TryParse(input, out int intValue))
             {
-                result = true;
-                Console.WriteLine("Sie haben eingegeben: (bool: {1})", result);
+                Console.WriteLine("Der Datentyp ist: Integer");
+                Console.WriteLine($"Erkannte Variable: {intValue}");
             }
-            else if (input.Equals("Falsch", StringComparison.OrdinalIgnoreCase))
+            else if (double.TryParse(input, CultureInfo.InvariantCulture, out double doubleValue))
             {
-                result = false;
-                Console.WriteLine("Sie haben eingegeben: (bool: {1})", result);
+                Console.WriteLine("Der Datentyp ist: Double");
+                Console.WriteLine($"Erkannte Variable: {doubleValue}");
+            }
+            else if (DateTime.TryParse(input, out DateTime dateValue))
+            {
+                Console.WriteLine("Der Datentyp ist: Datum");
+                Console.WriteLine($"Erkannte Variable: {dateValue.ToShortDateString()}");
+            }
+            else
+            {
+                if (input != "Beenden")
+                {
+                    Console.WriteLine("Der eingegebene Wert konnte keinem Datentyp zugeordnet werden.");
+                }
             }
         }
     }
