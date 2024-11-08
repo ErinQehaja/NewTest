@@ -5,7 +5,9 @@ VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewTest", "NewTest\NewTest.csproj", "{1AAA6DFF-F75F-4CC9-AB1B-93F26739157D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Programmierübung1", "Programmierübung1\Programmierübung1.csproj", "{D6F30FB9-075B-4AF6-AA50-9CC6C7934FC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Programmierübung1", "Programmierübung1\Programmierübung1.csproj", "{D6F30FB9-075B-4AF6-AA50-9CC6C7934FC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjektorientierungBegining", "ObjektorientierungBegining\ObjektorientierungBegining.csproj", "{9872C1CC-4525-4224-9DF0-0726C946E281}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D6F30FB9-075B-4AF6-AA50-9CC6C7934FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6F30FB9-075B-4AF6-AA50-9CC6C7934FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6F30FB9-075B-4AF6-AA50-9CC6C7934FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9872C1CC-4525-4224-9DF0-0726C946E281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9872C1CC-4525-4224-9DF0-0726C946E281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9872C1CC-4525-4224-9DF0-0726C946E281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9872C1CC-4525-4224-9DF0-0726C946E281}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
