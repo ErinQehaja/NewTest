@@ -26,7 +26,11 @@ namespace ObjektorientierungBeginnig
             }
             else
             {
-                Console.WriteLine(this.ToString());
+                Console.WriteLine("Im Tierheim befinden sich die folgenden Katzen:");
+                foreach (var cat in _cats)
+                {
+                    Console.WriteLine(cat);
+                }
             }
         }
 

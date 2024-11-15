@@ -1,34 +1,31 @@
-﻿using System;
+﻿using ObjektorientierungBegining;
+using System.Xml.Linq;
 
-namespace ObjektorientierungBeginnig
+class Cat : Animal
 {
-    class Cat
+    private DateTime _birthDate;
+    public string? Color { get; set; }
+
+    public int Age
     {
-        private DateTime _birthDate;
-
-        public string? Color { get; set; }
-
-        public int Age
+        get
         {
-            get
+            int age = DateTime.Now.Year - _birthDate.Year;
+            if (DateTime.Now < _birthDate.AddYears(age))
             {
-                int age = DateTime.Now.Year - _birthDate.Year;
-                if (DateTime.Now < _birthDate.AddYears(age))
-                {
-                    age--;
-                }
-                return age;
+                age--;
             }
+            return age;
         }
+    }
 
-        public Cat(DateTime birthDate)
-        {
-            _birthDate = birthDate;
-        }
+    public Cat(string name, DateTime birthDate) : base(name)
+    {
+        _birthDate = birthDate;
+    }
 
-        public override string ToString()
-        {
-            return $"Farbe: {Color ?? "unbekannt"}, Alter: {Age} Jahre";
-        }
+    public override string ToString()
+    {
+        return $"Name: {Name}, Farbe: {Color ?? "unbekannt"}, Alter: {Age} Jahre";
     }
 }
