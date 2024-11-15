@@ -26,12 +26,23 @@ namespace ObjektorientierungBeginnig
             }
             else
             {
-                Console.WriteLine("Im Tierheim befinden sich die folgenden Katzen:");
-                foreach (var cat in _cats)
-                {
-                    Console.WriteLine($"Farbe: {cat.Color}, Alter: {cat.Age} Jahre");
-                }
+                Console.WriteLine(this.ToString());
             }
+        }
+
+        public override string ToString()
+        {
+            if (_cats.Count == 0)
+            {
+                return "Das Tierheim hat keine Katzen.";
+            }
+
+            string result = "Im Tierheim befinden sich die folgenden Katzen:\n";
+            foreach (var cat in _cats)
+            {
+                result += cat.ToString() + "\n";
+            }
+            return result.TrimEnd();
         }
     }
 }

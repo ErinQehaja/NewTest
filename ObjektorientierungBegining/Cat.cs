@@ -4,18 +4,9 @@ namespace ObjektorientierungBeginnig
 {
     class Cat
     {
-        private string? _color;
         private DateTime _birthDate;
 
-        public string? Color
-        {
-            get { return _color; }
-            set
-            {
-                if (_color == value) return;
-                _color = value;
-            }
-        }
+        public string? Color { get; set; }
 
         public int Age
         {
@@ -33,6 +24,11 @@ namespace ObjektorientierungBeginnig
         public Cat(DateTime birthDate)
         {
             _birthDate = birthDate;
+        }
+
+        public override string ToString()
+        {
+            return $"Farbe: {Color ?? "unbekannt"}, Alter: {Age} Jahre";
         }
     }
 }
