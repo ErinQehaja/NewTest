@@ -30,6 +30,7 @@ namespace ObjektorientierungBeginnig
                 foreach (var cat in _cats)
                 {
                     Console.WriteLine(cat);
+                    cat.gibTypischenLautVonDir();
                 }
             }
         }
