@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ObjektorientierungBegining
 {
-    class Animal
+    class Animal : Lebewesen
     {
-        public string Name { get;}
+        public string Name { get; }
 
-        public Animal(string name)
+        public Animal(string name, DateTime birthDate) : base(birthDate)
         {
-            Name = name;  
+            Name = name;
         }
     }
 }
