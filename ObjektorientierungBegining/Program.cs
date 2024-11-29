@@ -5,7 +5,7 @@ Console.WriteLine("Willkommen im Tierheim!");
 
 Tierheim meinTierheim = new Tierheim();
 
-Cat cat1 = new Cat("Kitty", new DateTime(2020, 5, 15))
+Cat cat1 = new Cat("Kitty", new DateTime(2019, 5, 15))
 {
     Color = "schwarz"
 };
