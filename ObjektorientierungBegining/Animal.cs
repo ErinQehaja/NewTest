@@ -8,7 +8,7 @@ namespace ObjektorientierungBegining
 {
     class Animal
     {
-        public string Name { get; set; }
+        public string Name { get;}
 
         public Animal(string name)
         {

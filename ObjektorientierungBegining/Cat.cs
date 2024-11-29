@@ -4,7 +4,7 @@ using System.Xml.Linq;
 class Cat : Animal
 {
     private DateTime _birthDate;
-    public string? Color { get; set; }
+    public string Color { get; set; }
 
     public int Age
     {

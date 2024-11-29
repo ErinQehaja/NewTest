@@ -46,7 +46,7 @@ namespace ObjektorientierungBeginnig
             {
                 result += cat.ToString() + "\n";
             }
-            return result.TrimEnd();
+            return result;
         }
     }
 }
