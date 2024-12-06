@@ -8,11 +8,31 @@ namespace ObjektorientierungBegining
 {
     class Animal : Lebewesen
     {
-        public string Name { get; }
+        public int AnzahlBeine { get; set; }
 
-        public Animal(string name, DateTime birthDate) : base(birthDate)
+        public Animal(string name, DateTime birthDate, string color) : base(name, birthDate, color)
         {
-            Name = name;
+        }
+
+        public void SetLegs(string tier)
+        {
+            if (tier == "Bipedalier")
+            {
+                AnzahlBeine = 2; 
+            }
+            else if (tier == "Quadrupedier")
+            {
+                AnzahlBeine = 4; 
+            }
+            else if (tier == "Apodier")
+            {
+                AnzahlBeine = 0;
+            }
+        }
+
+        public virtual void gibTypischenLautVonDir()
+        {
+            Console.WriteLine("Das Tier gibt keinen typischen Laut von sich.");
         }
     }
 }
