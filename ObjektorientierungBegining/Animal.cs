@@ -12,8 +12,7 @@ namespace ObjektorientierungBegining
 
         public static List<Animal> AllAnimals { get; } = new List<Animal>();
 
-        public Animal(string name, DateTime birthDate, string color)
-            : base(name, birthDate, color)
+        public Animal(string name, DateTime birthDate, string color) : base(name, birthDate, color)
         {
             AllAnimals.Add(this);
         }
