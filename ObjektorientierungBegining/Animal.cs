@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ObjektorientierungBegining
 {
-    class Animal : Lebewesen
+    public class Animal : Lebewesen
     {
         public int AnzahlBeine { get; private set; }
 
@@ -15,6 +15,11 @@ namespace ObjektorientierungBegining
         public Animal(string name, DateTime birthDate, string color) : base(name, birthDate, color)
         {
             AllAnimals.Add(this);
+        }
+
+        public override string ToString()
+        {
+            return $"Name: {Name}, Farbe: {Color}, Alter: {Age()} Jahre, Anzahl der Beine: {AnzahlBeine}";
         }
 
         public void SetLegs(string tier)
