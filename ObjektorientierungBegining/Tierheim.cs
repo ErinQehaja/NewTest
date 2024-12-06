@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace ObjektorientierungBeginnig
 {
-    class Tierheim 
+    public class Tierheim 
     {
         public void DisplayAllAnimals()
         {
