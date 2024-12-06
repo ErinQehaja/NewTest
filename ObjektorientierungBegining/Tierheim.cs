@@ -1,53 +1,30 @@
-﻿using System;
+﻿using ObjektorientierungBegining;
+using System;
 using System.Collections.Generic;
 
 namespace ObjektorientierungBeginnig
 {
-    class Tierheim
+    class Tierheim 
     {
-        private List<Cat> _cats;
-
-        public Tierheim()
+        public void DisplayAllAnimals()
         {
-            _cats = new List<Cat>();
-        }
-
-        public void AddCat(Cat cat)
-        {
-            _cats.Add(cat);
-            Console.WriteLine("Eine neue Katze wurde aufgenommen.");
-        }
-
-        public void DisplayAllCats()
-        {
-            if (_cats.Count == 0)
+            if (Animal.AllAnimals.Count == 0)
             {
-                Console.WriteLine("Das Tierheim hat keine Katzen.");
+                Console.WriteLine("Das Tierheim hat keine Tiere.");
+                return;
             }
-            else
+
+            Console.WriteLine("Im Tierheim befinden sich folgende Tiere:");
+            foreach (var animal in Animal.AllAnimals)
             {
-                Console.WriteLine("Im Tierheim befinden sich die folgenden Katzen:");
-                foreach (var cat in _cats)
-                {
-                    Console.WriteLine(cat);
-                    cat.gibTypischenLautVonDir();
-                }
+                Console.WriteLine($"Name: {animal.Name}, Farbe: {animal.Color}, Alter: {animal.Age()} Jahre, Beine: {animal.AnzahlBeine}");
             }
         }
 
-        public override string ToString()
-        {
-            if (_cats.Count == 0)
-            {
-                return "Das Tierheim hat keine Katzen.";
-            }
+        public int NumberOfAnimals => Animal.AllAnimals.Count;
 
-            string result = "Im Tierheim befinden sich die folgenden Katzen:\n";
-            foreach (var cat in _cats)
-            {
-                result += cat.ToString() + "\n";
-            }
-            return result;
-        }
+        public int NumberOfCats => Animal.AllAnimals.Where(a => a.GetType() == typeof(Cat)).Count();
+
+        public int NumberOfDogs => Animal.AllAnimals.Where(a => a.GetType() == typeof(Dog)).Count();
     }
 }

@@ -8,26 +8,21 @@ namespace ObjektorientierungBegining
 {
     class Animal : Lebewesen
     {
-        public int AnzahlBeine { get; set; }
+        public int AnzahlBeine { get; private set; }
 
-        public Animal(string name, DateTime birthDate, string color) : base(name, birthDate, color)
+        public static List<Animal> AllAnimals { get; } = new List<Animal>();
+
+        public Animal(string name, DateTime birthDate, string color)
+            : base(name, birthDate, color)
         {
+            AllAnimals.Add(this);
         }
 
         public void SetLegs(string tier)
         {
-            if (tier == "Bipedalier")
-            {
-                AnzahlBeine = 2; 
-            }
-            else if (tier == "Quadrupedier")
-            {
-                AnzahlBeine = 4; 
-            }
-            else if (tier == "Apodier")
-            {
-                AnzahlBeine = 0;
-            }
+            if (tier == "Bipedalier") AnzahlBeine = 2;
+            else if (tier == "Quadrupedier") AnzahlBeine = 4;
+            else if (tier == "Apodier") AnzahlBeine = 0;
         }
 
         public virtual void gibTypischenLautVonDir()
