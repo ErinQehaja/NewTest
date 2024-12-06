@@ -9,21 +9,21 @@ namespace ObjektorientierungBegining
 {
     class Lebewesen
     {
-        public DateTime BirthDate { get; }
+        private DateTime _birthDate { get; }
         public string Name { get; }
-        public string Color { get;}
+        public string Color { get; }
 
         public Lebewesen(string name, DateTime birthDate, string color)
         {
-            BirthDate = birthDate;
+            _birthDate = birthDate;
             Name = name;
             Color = color;
         }
 
         public int Age()
         {
-            int age = DateTime.Now.Year - BirthDate.Year;
-            if (DateTime.Now < BirthDate.AddYears(age))
+            int age = DateTime.Now.Year - _birthDate.Year;
+            if (DateTime.Now < _birthDate.AddYears(age))
             {
                 age--;
             }
