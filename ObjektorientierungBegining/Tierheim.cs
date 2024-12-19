@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace ObjektorientierungBeginnig
 {
-    class Tierheim 
+    public class Tierheim
     {
         public void DisplayAllAnimals()
         {
@@ -26,5 +26,18 @@ namespace ObjektorientierungBeginnig
         public int NumberOfCats => Animal.AllAnimals.Where(a => a.GetType() == typeof(Cat)).Count();
 
         public int NumberOfDogs => Animal.AllAnimals.Where(a => a.GetType() == typeof(Dog)).Count();
+
+        public double CalculateAverageAge()
+        {
+            if (Animal.AllAnimals.Count == 0)
+            {
+                Console.WriteLine("Das Tierheim hat keine Tiere, daher kann das Durchschnittsalter nicht berechnet werden.");
+                return 0;
+            }
+
+            double averageAge = Animal.AllAnimals.Average(a => a.Age());
+            Console.WriteLine($"Das Durchschnittsalter der Tiere im Tierheim beträgt {averageAge} Jahre.");
+            return averageAge;
+        }
     }
 }
