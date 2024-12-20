@@ -18,5 +18,6 @@ class Program
         Console.WriteLine($"Gesamtanzahl der Tiere: {meinTierheim.NumberOfAnimals}");
         Console.WriteLine($"Anzahl der Katzen: {meinTierheim.NumberOfCats}");
         Console.WriteLine($"Anzahl der Hunde: {meinTierheim.NumberOfDogs}");
+        meinTierheim.CalculateAverageAge();
     }
 }

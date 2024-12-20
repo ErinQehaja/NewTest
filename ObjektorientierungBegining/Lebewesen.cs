@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace ObjektorientierungBegining
 {
-    class Lebewesen
+    public class Lebewesen
     {
         private DateTime _birthDate { get; }
         public string Name { get; }

@@ -3,19 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ObjektorientierungBegining;
 
-namespace ObjektorientierungBegining
-{
-    class Dog : Animal
+public class Dog : Animal
     {
         public Dog(string name, DateTime birthDate, string color) : base(name, birthDate, color)
         {
             SetLegs("Quadrupedier");
-        }
-
-        public override string ToString()
-        {
-            return $"Name: {Name}, Farbe: {Color}, Alter: {Age()} Jahre, Anzahl der Beine: {AnzahlBeine}";
         }
 
         public override void gibTypischenLautVonDir()
@@ -23,4 +17,4 @@ namespace ObjektorientierungBegining
             Console.WriteLine($"Der {Name} bellt 'Wuff'!");
         }
     }
-}
+
