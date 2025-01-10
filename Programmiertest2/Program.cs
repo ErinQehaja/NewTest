@@ -9,12 +9,12 @@ namespace Programmiertest2
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
             School mySchool = new School("HTL Dornbirn");
 
-            Classroom room1 = new Classroom("1A", 50.0, 30, true);
-            Classroom room2 = new Classroom("2B", 60.0, 25, false);
+            Classroom room1 = new Classroom("185", 50.0, 30, true);
+            Classroom room2 = new Classroom("247", 60.0, 25, false);
 
             mySchool.AddClassroom(room1);
             mySchool.AddClassroom(room2);
@@ -56,7 +56,23 @@ namespace Programmiertest2
             foreach (var room in mySchool.GetClassroomsWithCynap())
             {
                 Console.WriteLine($"- {room.RoomName}");
+
+                Console.WriteLine();
             }
+
+            Console.WriteLine($"Total Classes: {mySchool.GetTotalClasses()}");
+
+            Console.WriteLine("Classes with Student Count:");
+            foreach (var kvp in mySchool.GetClassesWithStudentCount())
+            {
+                Console.WriteLine($"Class {kvp.Key}: {kvp.Value} students");
+            }
+
+            string className = "1A";
+            Console.WriteLine($"Female Percentage in Class {className}: {mySchool.GetFemalePercentageInClass(className):F2}%");
+
+            string roomName = "185";
+            Console.WriteLine($"Can Class {className} fit in Room {roomName}?: {mySchool.CanClassFitInRoom(className, roomName)}");
         }
     }
 }
