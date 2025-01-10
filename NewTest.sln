@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Programmierübung1", "Progr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjektorientierungBegining", "ObjektorientierungBegining\ObjektorientierungBegining.csproj", "{9872C1CC-4525-4224-9DF0-0726C946E281}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTierheim", "TestTierheim\TestTierheim.csproj", "{9B95303E-82DF-495A-BF1F-6113E2169157}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTierheim", "TestTierheim\TestTierheim.csproj", "{9B95303E-82DF-495A-BF1F-6113E2169157}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Programmiertest2", "Programmiertest2\Programmiertest2.csproj", "{D757AC54-7D5A-45A9-8A09-EAFAEA16B7D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9B95303E-82DF-495A-BF1F-6113E2169157}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B95303E-82DF-495A-BF1F-6113E2169157}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B95303E-82DF-495A-BF1F-6113E2169157}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D757AC54-7D5A-45A9-8A09-EAFAEA16B7D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D757AC54-7D5A-45A9-8A09-EAFAEA16B7D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D757AC54-7D5A-45A9-8A09-EAFAEA16B7D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D757AC54-7D5A-45A9-8A09-EAFAEA16B7D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
