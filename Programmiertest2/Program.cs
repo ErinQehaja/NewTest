@@ -45,6 +45,18 @@ namespace Programmiertest2
 
                 Console.WriteLine();
             }
+
+            Console.WriteLine($"Total Students: {mySchool.GetTotalStudents()}");
+            Console.WriteLine($"Male Students: {mySchool.GetStudentsByGender("Male")}");
+            Console.WriteLine($"Female Students: {mySchool.GetStudentsByGender("Female")}");
+            Console.WriteLine($"Total Classrooms: {mySchool.GetTotalClassrooms()}");
+            Console.WriteLine($"Average Age of Students: {mySchool.GetAverageAge():F2} years\n");
+
+            Console.WriteLine("Classrooms with Cynap:");
+            foreach (var room in mySchool.GetClassroomsWithCynap())
+            {
+                Console.WriteLine($"- {room.RoomName}");
+            }
         }
     }
 }

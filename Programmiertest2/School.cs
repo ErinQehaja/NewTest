@@ -33,5 +33,33 @@ namespace Programmiertest2
         {
             return Classrooms.FirstOrDefault(c => c.Students.Any(s => s.Class == studentClass));
         }
+
+        public int GetTotalStudents()
+        {
+            return Students.Count;
+        }
+
+        public int GetStudentsByGender(string gender)
+        {
+            return Students.Count(s => s.Gender.Equals(gender, StringComparison.OrdinalIgnoreCase));
+        }
+
+        public int GetTotalClassrooms()
+        {
+            return Classrooms.Count;
+        }
+
+        public double GetAverageAge()
+        {
+            if (!Students.Any()) return 0;
+
+            var today = DateTime.Today;
+            return Students.Average(s => (today - s.DateOfBirth).TotalDays / 365.25);
+        }
+
+        public List<Classroom> GetClassroomsWithCynap()
+        {
+            return Classrooms.Where(c => c.HasCynap).ToList();
+        }
     }
 }
