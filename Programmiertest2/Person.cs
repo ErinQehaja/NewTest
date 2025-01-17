@@ -9,7 +9,7 @@ namespace Programmiertest2
     public class Person
     {
         public string Gender { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; }
 
         public Person(string gender, DateTime dateOfBirth)
         {
