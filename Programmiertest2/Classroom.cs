@@ -8,7 +8,7 @@ namespace Programmiertest2
 {
     public class Classroom
     {
-        public string RoomName { get; set; }
+        public string NameRoom { get; set; }
         public double Size { get; set; } // Größe in Quadratmeter
         public int Capacity { get; set; } // Nummer der Sitze
         public bool HasCynap { get; set; }
@@ -16,7 +16,7 @@ namespace Programmiertest2
 
         public Classroom(string roomName, double size, int capacity, bool hasCynap)
         {
-            RoomName = roomName;
+            NameRoom = roomName;
             Size = size;
             Capacity = capacity;
             HasCynap = hasCynap;

@@ -32,7 +32,7 @@ namespace Programmiertest2
 
             foreach (var classroom in mySchool.Classrooms)
             {
-                Console.WriteLine($"Classroom: {classroom.RoomName}");
+                Console.WriteLine($"Classroom: {classroom.NameRoom}");
                 Console.WriteLine($"Size: {classroom.Size} m^2");
                 Console.WriteLine($"Capacity: {classroom.Capacity}");
                 Console.WriteLine($"Has Cynap: {classroom.HasCynap}");
@@ -55,7 +55,7 @@ namespace Programmiertest2
             Console.WriteLine("Classrooms with Cynap:");
             foreach (var room in mySchool.GetClassroomsWithCynap())
             {
-                Console.WriteLine($"- {room.RoomName}");
+                Console.WriteLine($"- {room.NameRoom}");
 
                 Console.WriteLine();
             }
