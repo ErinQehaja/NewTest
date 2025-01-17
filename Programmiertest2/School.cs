@@ -80,7 +80,7 @@ namespace Programmiertest2
         public bool CanClassFitInRoom(string className, string roomName)
         {
             var studentsInClass = Students.Count(s => s.Class == className);
-            var room = Classrooms.FirstOrDefault(r => r.RoomName == roomName);
+            var room = Classrooms.FirstOrDefault(r => r.NameRoom == roomName);
             return room != null && room.Capacity >= studentsInClass;
         }
 
