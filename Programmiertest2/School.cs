@@ -36,7 +36,7 @@ namespace Programmiertest2
 
         public int GetStudentsByGender(string gender)
         {
-            return Students.Count(s => s.Gender.Equals(gender, StringComparison.OrdinalIgnoreCase));
+            return Students.Count(s => s.GenderPerson.Equals(gender, StringComparison.OrdinalIgnoreCase));
         }
 
         public int GetTotalClassrooms()
@@ -73,7 +73,7 @@ namespace Programmiertest2
             var studentsInClass = Students.Where(s => s.Class == className).ToList();
             if (!studentsInClass.Any()) return 0;
 
-            var femaleCount = studentsInClass.Count(s => s.Gender.Equals("Female", StringComparison.OrdinalIgnoreCase));
+            var femaleCount = studentsInClass.Count(s => s.GenderPerson.Equals("Female", StringComparison.OrdinalIgnoreCase));
             return (double)femaleCount / studentsInClass.Count * 100;
         }
 

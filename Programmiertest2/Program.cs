@@ -40,7 +40,7 @@ namespace Programmiertest2
 
                 foreach (var student in classroom.Students)
                 {
-                    Console.WriteLine($"- {student.Gender}, Born: {student.DateOfBirth.ToShortDateString()}, Class: {student.Class}");
+                    Console.WriteLine($"- {student.GenderPerson}, Born: {student.DateOfBirth.ToShortDateString()}, Class: {student.Class}");
                 }
 
                 Console.WriteLine();

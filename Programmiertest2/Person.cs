@@ -8,12 +8,12 @@ namespace Programmiertest2
 {
     public class Person
     {
-        public string Gender { get; set; }
+        public string GenderPerson { get; set; }
         public DateTime DateOfBirth { get; }
 
         public Person(string gender, DateTime dateOfBirth)
         {
-            Gender = gender;
+            GenderPerson = gender;
             DateOfBirth = dateOfBirth;
         }
     }
