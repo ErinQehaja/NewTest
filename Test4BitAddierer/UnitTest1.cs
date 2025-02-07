@@ -6,45 +6,34 @@ namespace TestBitAdder
     public class TestBitAdder
     {
         [Test]
-        public void AddTwoBinaryNumbers_TestCase1()
+        public void Test_HalfAdder()
         {
-            int a = 0b1111; // 15
-            int b = 0b0001; // 1
-            int expectedResult = 0b00000; // 16
-            int expectedCarryOut = 1; 
-
-            var (result, carryOut) = BitAdder.FourBitAdder(a, b);
-
-            Assert.AreEqual(expectedResult, result, "Das Ergebnis stimmt nicht überein.");
-            Assert.AreEqual(expectedCarryOut, carryOut, "Der Übertrag stimmt nicht.");
+            Assert.AreEqual((0, 0), BitAdder.HalfAdder(0, 0));
+            Assert.AreEqual((1, 0), BitAdder.HalfAdder(0, 1));
+            Assert.AreEqual((1, 0), BitAdder.HalfAdder(1, 0));
+            Assert.AreEqual((0, 1), BitAdder.HalfAdder(1, 1));
         }
 
         [Test]
-        public void AddTwoBinaryNumbers_TestCase2()
+        public void Test_FullAdder()
         {
-            int a = 0b1010; // 10
-            int b = 0b0101; // 5
-            int expectedResult = 0b1111; // 15
-            int expectedCarryOut = 0; 
-
-            var (result, carryOut) = BitAdder.FourBitAdder(a, b);
-
-            Assert.AreEqual(expectedResult, result, "Das Ergebnis stimmt nicht überein.");
-            Assert.AreEqual(expectedCarryOut, carryOut, "Der Übertrag stimmt nicht.");
+            Assert.AreEqual((0, 0), BitAdder.FullAdder(0, 0, 0));
+            Assert.AreEqual((1, 0), BitAdder.FullAdder(0, 1, 0));
+            Assert.AreEqual((1, 0), BitAdder.FullAdder(1, 0, 0));
+            Assert.AreEqual((0, 1), BitAdder.FullAdder(1, 1, 0));
+            Assert.AreEqual((1, 0), BitAdder.FullAdder(0, 0, 1));
+            Assert.AreEqual((0, 1), BitAdder.FullAdder(0, 1, 1));
+            Assert.AreEqual((0, 1), BitAdder.FullAdder(1, 0, 1));
+            Assert.AreEqual((1, 1), BitAdder.FullAdder(1, 1, 1));
         }
 
         [Test]
-        public void AddTwoBinaryNumbers_TestCase3()
+        public void Test_FourBitAdder()
         {
-            int a = 0b0110; // 6
-            int b = 0b0110; // 6
-            int expectedResult = 0b1100; // 12
-            int expectedCarryOut = 0; 
-
-            var (result, carryOut) = BitAdder.FourBitAdder(a, b);
-
-            Assert.AreEqual(expectedResult, result, "Das Ergebnis stimmt nicht überein.");
-            Assert.AreEqual(expectedCarryOut, carryOut, "Der Übertrag stimmt nicht.");
+            Assert.AreEqual((0b0000, 0), BitAdder.FourBitAdder(0b0000, 0b0000));
+            Assert.AreEqual((0b0001, 0), BitAdder.FourBitAdder(0b0000, 0b0001));
+            Assert.AreEqual((0b0010, 0), BitAdder.FourBitAdder(0b0001, 0b0001));
+            Assert.AreEqual((0b1010, 1), BitAdder.FourBitAdder(0b1111, 0b1011));
         }
     }
 }
