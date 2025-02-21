@@ -41,7 +41,7 @@ public class BitAdder
 
     public static void Main(string[] args)
     {
-        Console.WriteLine("Gib die erste 4-Bit Zahl ein (z.B. 1101):");
+        Console.WriteLine("Gib die erste 4-Bit Zahl ein (z.B. 1101):"); 
         string inputA = Console.ReadLine();
         int a = Convert.ToInt32(inputA, 2);
 

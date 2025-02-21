@@ -6,7 +6,7 @@ namespace TestBitAdder
     public class TestBitAdder
     {
         [Test]
-        public void Test_HalfAdder()
+        public void HalfAdder_ab_sumcarry()
         {
             Assert.AreEqual((0, 0), BitAdder.HalfAdder(0, 0));
             Assert.AreEqual((1, 0), BitAdder.HalfAdder(0, 1));
@@ -15,7 +15,7 @@ namespace TestBitAdder
         }
 
         [Test]
-        public void Test_FullAdder()
+        public void FullAdder_abcarryin_sumcarry()
         {
             Assert.AreEqual((0, 0), BitAdder.FullAdder(0, 0, 0));
             Assert.AreEqual((1, 0), BitAdder.FullAdder(0, 1, 0));
@@ -28,7 +28,7 @@ namespace TestBitAdder
         }
 
         [Test]
-        public void Test_FourBitAdder()
+        public void FourBitAdder_ab_resultcarry()
         {
             Assert.AreEqual((0b0000, 0), BitAdder.FourBitAdder(0b0000, 0b0000));
             Assert.AreEqual((0b0001, 0), BitAdder.FourBitAdder(0b0000, 0b0001));
